@@ -6,16 +6,19 @@ import Form from "react-bootstrap/Form";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 const Login = () => {
   const { logIn, setLoading } = useContext(AuthContext);
   const navigate = useNavigate();
+  useTitle('Login')
 
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault('Login');
+
 
     // input validation
     const form = e.target;

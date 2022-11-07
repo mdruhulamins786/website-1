@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 const Register = () => {
   const [error, setError] = useState("");
@@ -11,6 +12,8 @@ const Register = () => {
   const navigate = useNavigate();
   const { signInEmail, updateUserProfile, verifyEmail } =
     useContext(AuthContext);
+
+  useTitle("Register");
 
   const handleSubmit = (e) => {
     e.preventDefault();

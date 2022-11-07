@@ -17,21 +17,21 @@ export const routers = createBrowserRouter([
       {
         path: "/",
         loader: () => {
-          return fetch("http://localhost:5000/news");
+          return fetch("https://website-1-server.vercel.app/news");
         },
         element: <Home />,
       },
       {
         path: "/category/:id",
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/category/${params.id}`);
+          return fetch(`https://website-1-server.vercel.app/category/${params.id}`);
         },
         element: <Category />,
       },
       {
         path: "/news/:id",
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/news/${params.id}`);
+          return fetch(`https://website-1-server.vercel.app/news/${params.id}`);
         },
         element: (
           <PrivateRoutes>
