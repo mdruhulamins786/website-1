@@ -66,7 +66,7 @@ const Headers = () => {
                   </>
                 )}
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Link  to="/profile">
                 {user?.photoURL ? (
                   <Image
                     style={{ width: "45px", height: "45px" }}
@@ -76,7 +76,7 @@ const Headers = () => {
                 ) : (
                   <FaUserAlt />
                 )}
-              </Nav.Link>
+              </Link>
             </Nav>
             <div className="d-lg-none">
               <Container>

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import Profile from "../Others/Profile/Profile";
 import Category from "../pages/Category/Category/Category";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login/Login";
@@ -49,6 +50,14 @@ export const routers = createBrowserRouter([
       {
         path: "/terms",
         element: <TermsAndConditions />,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoutes>
+            <Profile />
+          </PrivateRoutes>
+        ),
       },
     ],
   },
